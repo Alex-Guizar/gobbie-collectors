@@ -2,11 +2,12 @@ import React from 'react';
 // Bootstrap Components
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import Form from 'react-bootstrap/Form';
-import FormControl from 'react-bootstrap/FormControl';
-import Button from 'react-bootstrap/Button';
+// Custom Components
+import HeadSearch from './HeadSearch';
 
-const Header = () => {
+const Header = (props) => {
+  const { searchCompanions } = props;
+
   return (
     <header>
       <Navbar bg="dark" variant="dark" expand="md">
@@ -26,10 +27,8 @@ const Header = () => {
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#minons">Minions</Nav.Link>
           </Nav>
-          <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-success">Search</Button>
-          </Form>
+
+          <HeadSearch searchCompanions={searchCompanions} />
         </Navbar.Collapse>
       </Navbar>
     </header>

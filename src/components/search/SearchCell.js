@@ -1,7 +1,7 @@
 import React from 'react';
 
-const SearchCell = () => {
-  return <div>SearchCell</div>;
+const SearchCell = (props) => {
+  return <div>{props.name}</div>;
 };
 
 export default SearchCell;
